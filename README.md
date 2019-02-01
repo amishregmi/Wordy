@@ -1,0 +1,2 @@
+# Wordie-OCR
+Text Recognizer
