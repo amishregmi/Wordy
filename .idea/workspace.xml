@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="resul" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="The first " />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -28,96 +28,120 @@
     <session id="1280394936">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="5" />
-          <entry key="java" value="22" />
-          <entry key="xml" value="7" />
+          <entry key="gradle" value="7" />
+          <entry key="java" value="27" />
+          <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="5" />
-          <entry key="JAVA" value="22" />
-          <entry key="XML" value="7" />
+          <entry key="Groovy" value="7" />
+          <entry key="JAVA" value="27" />
+          <entry key="XML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="3" />
-          <entry key="java" value="691" />
+          <entry key="java" value="1160" />
           <entry key="txt" value="11" />
-          <entry key="xml" value="77" />
+          <entry key="xml" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="3" />
-          <entry key="JAVA" value="691" />
+          <entry key="JAVA" value="1160" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="XML" value="77" />
+          <entry key="XML" value="126" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="661" column="5" selection-start-line="661" selection-start-column="5" selection-end-line="661" selection-end-column="5" />
+            <state relative-caret-position="391">
+              <caret line="251" column="33" selection-start-line="251" selection-start-column="33" selection-end-line="251" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onCreate#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#requestCameraPermission#0;class#OcrCaptureActivity#0" />
-                <element signature="method#requestCameraPermission#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onTouchEvent#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#createCameraSource#0;class#OcrCaptureActivity#0" />
-                <element signature="method#createCameraSource#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onResume#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onResume#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onPause#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onPause#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onDestroy#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onDestroy#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#startCameraSource#0;class#OcrCaptureActivity#0" />
-                <element signature="method#startCameraSource#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onTap#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onTap#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onSingleTapConfirmed#0;class#CaptureGestureListener#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onScale#0;class#ScaleListener#0;class#OcrCaptureActivity#0" />
-                <element signature="docComment;method#onScaleBegin#0;class#ScaleListener#0;class#OcrCaptureActivity#0" />
-                <element signature="method#onScaleEnd#0;class#ScaleListener#0;class#OcrCaptureActivity#0" />
-                <element signature="method#showAllWordAndMeaning#0;class#OcrCaptureActivity#0" />
+                <element signature="e#4386#4458#0" />
+                <element signature="e#6338#6957#0" />
+                <element signature="e#6964#7147#0" />
+                <element signature="e#6964#8123#0" />
+                <element signature="e#8129#8354#0" />
+                <element signature="e#8360#8707#0" />
+                <element signature="e#8360#11390#0" />
+                <element signature="e#11396#11435#0" />
+                <element signature="e#11396#11542#0" />
+                <element signature="e#11548#11584#0" />
+                <element signature="e#11548#11729#0" />
+                <element signature="e#11735#11885#0" />
+                <element signature="e#11735#12037#0" />
+                <element signature="e#12043#12935#0" />
+                <element signature="e#12043#14535#0" />
+                <element signature="e#14541#14800#0" />
+                <element signature="e#14541#15586#0" />
+                <element signature="e#15592#15831#0" />
+                <element signature="e#15592#16957#0" />
+                <element signature="e#16963#17850#0" />
+                <element signature="e#18653#18920#0" />
+                <element signature="e#18749#18914#0" />
+                <element signature="e#18926#21211#0" />
+                <element signature="e#19020#19664#0" />
+                <element signature="e#19792#20368#0" />
+                <element signature="e#20500#21205#0" />
+                <element signature="e#21218#21512#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/AsyncResponse.java">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="373">
+              <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/CallbackTask.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dict.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/DictActivity.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OnSwipeTouchListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+            <state relative-caret-position="1173">
+              <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,49 +149,22 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
           <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/LocateWord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-631">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ocr_capture.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="41" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="68">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="30" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -195,14 +192,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/AsyncResponse.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/Saved.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/CallbackTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ocr_capture.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OnSwipeTouchListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/microsoft/cognitiveservices/speech/AudioActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/AudioActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="292" />
     <option name="y" value="-27" />
     <option name="width" value="1026" />
@@ -213,8 +213,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -231,12 +231,25 @@
               <item name="ocr-reader-complete" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ocrreader" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ocr-reader-complete" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ocrreader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ocr-reader-complete" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="ocr-reader-complete" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="ocr-reader-complete" type="1abcf292:AndroidViewProjectNode" />
@@ -246,25 +259,32 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="b8ec3396" />
+    <property name="device.picker.selection" value="2967d67b" />
     <property name="last_opened_file_path" value="D:/Camera" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\res\drawable-hdpi" />
+    <key name="android.template.packageName">
+      <recent name="com.google.android.gms.samples.vision.ocrreader" />
+      <recent name="com.microsoft.cognitiveservices.speech" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\res\layout" />
       <recent name="C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\java\com\google\android\gms\samples\vision\ocrreader" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\res\drawable-hdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -354,32 +374,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" visible="true" weight="0.17549168" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" weight="0.12622951" />
-      <window_info anchor="bottom" id="Logcat" weight="0.55573773" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Android Profiler" weight="0.3295082" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Build" visible="true" weight="0.6295082" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Preview" weight="0.48940998" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20347957" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Find" weight="0.53770494" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.42786884" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.16557378" />
+      <window_info anchor="bottom" id="Debug" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.3295082" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.5426229" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.3295082" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.33509833" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -390,7 +411,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java</url>
-          <line>253</line>
+          <line>285</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -468,40 +489,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/LocateWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-631">
+        <state relative-caret-position="-599">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ocr_capture.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/CallbackTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        <state relative-caret-position="421">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -512,46 +513,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/CallbackTask.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+        <state relative-caret-position="328">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ocr_capture.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OnSwipeTouchListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dict.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/DictActivity.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/microsoft/cognitiveservices/speech/AudioActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/AudioActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="29" lean-forward="true" selection-end-line="103" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="661" column="5" selection-start-line="661" selection-start-column="5" selection-end-line="661" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="251" column="33" selection-start-line="251" selection-start-column="33" selection-end-line="251" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onCreate#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#requestCameraPermission#0;class#OcrCaptureActivity#0" />
-            <element signature="method#requestCameraPermission#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onTouchEvent#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#createCameraSource#0;class#OcrCaptureActivity#0" />
-            <element signature="method#createCameraSource#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onResume#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onResume#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onPause#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onPause#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onDestroy#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onDestroy#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onRequestPermissionsResult#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#startCameraSource#0;class#OcrCaptureActivity#0" />
-            <element signature="method#startCameraSource#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onTap#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onTap#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onSingleTapConfirmed#0;class#CaptureGestureListener#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onScale#0;class#ScaleListener#0;class#OcrCaptureActivity#0" />
-            <element signature="docComment;method#onScaleBegin#0;class#ScaleListener#0;class#OcrCaptureActivity#0" />
-            <element signature="method#onScaleEnd#0;class#ScaleListener#0;class#OcrCaptureActivity#0" />
-            <element signature="method#showAllWordAndMeaning#0;class#OcrCaptureActivity#0" />
+            <element signature="e#4386#4458#0" />
+            <element signature="e#6338#6957#0" />
+            <element signature="e#6964#7147#0" />
+            <element signature="e#6964#8123#0" />
+            <element signature="e#8129#8354#0" />
+            <element signature="e#8360#8707#0" />
+            <element signature="e#8360#11390#0" />
+            <element signature="e#11396#11435#0" />
+            <element signature="e#11396#11542#0" />
+            <element signature="e#11548#11584#0" />
+            <element signature="e#11548#11729#0" />
+            <element signature="e#11735#11885#0" />
+            <element signature="e#11735#12037#0" />
+            <element signature="e#12043#12935#0" />
+            <element signature="e#12043#14535#0" />
+            <element signature="e#14541#14800#0" />
+            <element signature="e#14541#15586#0" />
+            <element signature="e#15592#15831#0" />
+            <element signature="e#15592#16957#0" />
+            <element signature="e#16963#17850#0" />
+            <element signature="e#18653#18920#0" />
+            <element signature="e#18749#18914#0" />
+            <element signature="e#18926#21211#0" />
+            <element signature="e#19020#19664#0" />
+            <element signature="e#19792#20368#0" />
+            <element signature="e#20500#21205#0" />
+            <element signature="e#21218#21512#0" />
           </folding>
         </state>
       </provider>

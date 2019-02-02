@@ -28,7 +28,7 @@ import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.speech.SpeechRecognizer;
+//import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -40,6 +40,7 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -55,10 +56,12 @@ import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
 import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
 import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationResult;
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
-import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeechRecognitionResult;
 
-import com.microsoft.cognitiveservices.speech.internal.ResultReason;
-import com.microsoft.cognitiveservices.speech.internal.SpeechConfig;
+import com.microsoft.cognitiveservices.speech.ResultReason;
+import com.microsoft.cognitiveservices.speech.SpeechConfig;
+import com.microsoft.cognitiveservices.speech.SpeechRecognitionResult;
+import com.microsoft.cognitiveservices.speech.SpeechRecognizer;
+
 import java.util.concurrent.Future;
 
 import static android.Manifest.permission.*;
@@ -121,7 +124,9 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         boolean autoFocus = true;
         boolean useFlash = false;
 
+        //Translation menu
         addDropDown();
+
         // Check for the camera permission before accessing the camera.  If the
         // permission is not granted yet, request permission.
         int rc = ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
@@ -152,6 +157,33 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                     }
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
+        //FOR VOICE--------------------------------
+        // Note: we need to request the permissions
+        int requestCode = 5; // unique code for the permission request
+        ActivityCompat.requestPermissions(OcrCaptureActivity.this, new String[]{RECORD_AUDIO, INTERNET}, requestCode);
+
+        // Set up Swipe to change activity
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.topLayout);
+        linearLayout.setOnTouchListener(new OnSwipeTouchListener(OcrCaptureActivity.this) {
+            public void onSwipeTop() {
+                Toast.makeText(OcrCaptureActivity.this, "top", Toast.LENGTH_SHORT).show();
+
+            }
+            public void onSwipeRight() {/
+                Toast.makeText(OcrCaptureActivity.this, "right", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(OcrCaptureActivity.this, Saved.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+            public void onSwipeLeft() {
+                Toast.makeText(OcrCaptureActivity.this, "left", Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeBottom() {
+                Toast.makeText(OcrCaptureActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
     }
 
     public void addDropDown() {
@@ -521,13 +553,13 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                 System.out.println("Int which is " + uniqueWords[which]);
                 String finalWord = uniqueWords[which];
                 word = finalWord;
-                displayMeaningBox(finalWord);
+                findMeaning(finalWord);
             }
         });
         prompt.show();
     }
 
-    public void displayMeaningBox(String finalWord){
+    public void findMeaning(String finalWord){
         CallbackTask callbackTask = new CallbackTask();
         callbackTask.delegate = this;
         callbackTask.execute(dictionaryEntries());
@@ -659,5 +691,66 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
     // -----------------------------------------------------------------------------------------------------------------
     //AMISH
     public void performAudio(View v) {
+        Toast.makeText(this, "Audio recording...", Toast.LENGTH_LONG);
+        System.out.println("Reacheddddd");
+        try {
+            SpeechConfig config = SpeechConfig.fromSubscription(speechSubscriptionKey, serviceRegion);
+            assert(config != null);
+
+            SpeechRecognizer reco = new SpeechRecognizer(config);
+            assert(reco != null);
+
+            Future<SpeechRecognitionResult> task = reco.recognizeOnceAsync();
+            assert(task != null);
+            System.out.println("Reachedddd 2");
+
+
+            SpeechRecognitionResult result = task.get();
+            assert(result != null);
+
+            if (result.getReason() == ResultReason.RecognizedSpeech) {
+                String whole_string = result.toString();
+                //txt.setText(result.toString());
+
+                int last_openbrac_pos = whole_string.lastIndexOf("<");
+
+                System.out.println("The position of < is: "+last_openbrac_pos);
+                System.out.println("Reachedddd 2");
+                int total_string_length = whole_string.length();
+
+                //Stores the input word.
+                String spokensentence = whole_string.substring(last_openbrac_pos+1, total_string_length-3);
+                System.out.println("The spoken sentence is: "+spokensentence);
+                System.out.println("Reachedddd 3 "+spokensentence);
+
+                //txt.setText("The spoken sentence is: " +spokensentence);
+
+                //Extracting the first word from the result.
+                int firstspace = spokensentence.indexOf(' ');
+                if (firstspace!=-1){
+
+                    String first_spoken_word = spokensentence.substring(0,firstspace);
+                    first_spoken_word=first_spoken_word.replace(",","");
+                    spokensentence = first_spoken_word;
+                    //spokensentence.substring(firstspace);
+
+                    System.out.println("The first word spoken is: "+first_spoken_word);
+                    //txt.setText("The first spoken word is: "+first_spoken_word);
+                }
+                word = spokensentence;
+                findMeaning(word);
+            }
+            else {
+                System.out.println("Error recognizing. Did you update the subscription info?" + System.lineSeparator() + result.toString());
+                //txt.setText("Error recognizing. Did you update the subscription info?" + System.lineSeparator() + result.toString());
+            }
+
+            reco.close();
+        } catch (Exception ex) {
+            Log.e("SpeechSDKDemo", "unexpected " + ex.getMessage());
+            assert(false);
+            System.out.println("Reachedddd else");
+        }
+
     }
 }
