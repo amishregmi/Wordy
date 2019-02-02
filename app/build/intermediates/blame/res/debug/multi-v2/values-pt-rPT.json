@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\bibha\\Desktop\\wordie\\android-vision-master\\android-vision-master\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rPT\\values-pt-rPT.xml",
+            "outputFile": "C:\\Users\\bibha\\Desktop\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rPT\\values-pt-rPT.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5079d8fb618b1763227ec11774d8566c\\res\\values-pt-rPT\\values-pt-rPT.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ef48ea11fd8e053e0c0b7c7d08e232de\\res\\values-pt-rPT\\values-pt-rPT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\bd36312a6c8444528f6c831c8a1dae45\\res\\values-pt-rPT\\values.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\481ff8aad82d0bb9dd82767f175c863a\\res\\values-pt-rPT\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\22331eee507c7289a92311d2ad0ae2bb\\res\\values-pt-rPT\\values-pt-rPT.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4825",
-                        "endColumns": "100",
-                        "endOffsets": "4921"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a75bf86d16c112b23ff3f918a9092d29\\res\\values-pt-rPT\\values.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\0b13aa906a639bae88ae176ca13b6057\\res\\values-pt-rPT\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "1917,2024,2219,2349,2459,2686,2816,2968,3310,3557,3667,3868,4001,4219,4427,4525,4624",
                         "endColumns": "106,194,129,109,226,129,151,137,246,109,200,132,217,207,97,98,115",
                         "endOffsets": "2019,2214,2344,2454,2681,2811,2963,3101,3552,3662,3863,3996,4214,4422,4520,4619,4735"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\85eb8631bb407ad49cf69dab9a39be49\\res\\values-pt-rPT\\values-pt-rPT.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4825",
+                        "endColumns": "100",
+                        "endOffsets": "4921"
                     }
                 }
             ]

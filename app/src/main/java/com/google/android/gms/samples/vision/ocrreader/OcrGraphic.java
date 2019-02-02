@@ -19,14 +19,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
-import android.graphics.Rect;
 import android.graphics.RectF;
 
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.text.Text;
 import com.google.android.gms.vision.text.TextBlock;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -100,42 +98,22 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
         if (textBlock == null) {
             return;
         }
-        // Draws the bounding box around the TextBlock.
-        //RectF rect = new RectF(textBlock.getBoundingBox());
-        //rect = translateRect(rect);
-        //canvas.drawRect(rect, rectPaint);
 
         // Break the text into multiple lines and draw each one according to its own bounding box.
         List<? extends Text> textComponents = textBlock.getComponents();
         for(Text currentText : textComponents) {
             List <? extends Text> words = currentText.getComponents();
-            for (Text each : words){
-                float left = translateX(each.getBoundingBox().left);
+            for (Text each : words) {
+                float left = translateX(currentText.getBoundingBox().left);
                 float right = translateX(each.getBoundingBox().right);
                 float top = translateY(each.getBoundingBox().top);
                 float bottom = translateY(each.getBoundingBox().bottom);
-                //canvas.drawRect(left, top, right, bottom, rectPaint);
-                //Point [] cornerPoints = getCornerPts(each.getCornerPoints());
-                //LocateWord.store(each.getValue(), cornerPoints);
-                //LocateWord.store(each.getValue(), left, top, right, bottom);
-
-                //try getting top-left corner point since x-axis is not accurate
-                Point [] cornerPoints = each.getCornerPoints();
+                Point[] cornerPoints = each.getCornerPoints();
                 Point topLeft = cornerPoints[0];
                 float temp_left = topLeft.x;
 
                 LocateWord.store(each.getValue(), temp_left, top, right, bottom);
-                //canvas.drawText(each.getValue(), left, bottom, textPaint);
-            }
+            }//canvas.drawText(currentText.getValue(), left, bottom, textPaint);
         }
     }
-
-    private Point [] getCornerPts(Point[] pts){
-        for (Point each : pts){
-            each.x = (int)translateX((float)each.x);
-            each.y = (int)translateY((float)each.y);
-        }
-        return pts;
-    }
-
 }

@@ -86,16 +86,14 @@ public final class LocateWord {
         return list;
     }
 
-    public static ArrayList<String> getbounds(){
-        ArrayList<String> list = new ArrayList<>();
-        for (String key : rMap.keySet() ){
-            if (key.equals("test")){
-                Point [] k = rMap.get(key);
-                String ret = k[0] + " " + k[1] + " " + k[2] + " " + k[3];
-                list.add(ret);
+    public static ArrayList<String> filterUniqueWords(ArrayList<String> allWords){
+        ArrayList<String> uniqueWords = new ArrayList<>();
+        for ( String eachWord: allWords) {
+            if (!uniqueWords.contains(eachWord)) {
+                uniqueWords.add(eachWord);
             }
         }
-        return  list;
+        return uniqueWords;
     }
 
     private static boolean check(Point[] pts){

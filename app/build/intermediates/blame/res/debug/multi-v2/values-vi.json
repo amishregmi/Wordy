@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\bibha\\Desktop\\wordie\\android-vision-master\\android-vision-master\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
+            "outputFile": "C:\\Users\\bibha\\Desktop\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a75bf86d16c112b23ff3f918a9092d29\\res\\values-vi\\values.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\0b13aa906a639bae88ae176ca13b6057\\res\\values-vi\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\22331eee507c7289a92311d2ad0ae2bb\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\85eb8631bb407ad49cf69dab9a39be49\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\bd36312a6c8444528f6c831c8a1dae45\\res\\values-vi\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "194",
-                        "endOffsets": "441"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3054",
-                        "endColumns": "194",
-                        "endOffsets": "3244"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5079d8fb618b1763227ec11774d8566c\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ef48ea11fd8e053e0c0b7c7d08e232de\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,4621",
                         "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
                         "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,4700"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\481ff8aad82d0bb9dd82767f175c863a\\res\\values-vi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "194",
+                        "endOffsets": "441"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3054",
+                        "endColumns": "194",
+                        "endOffsets": "3244"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\bibha\\Desktop\\wordie\\android-vision-master\\android-vision-master\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\bibha\\Desktop\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\22331eee507c7289a92311d2ad0ae2bb\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\85eb8631bb407ad49cf69dab9a39be49\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\bd36312a6c8444528f6c831c8a1dae45\\res\\values-mr\\values.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ef48ea11fd8e053e0c0b7c7d08e232de\\res\\values-mr\\values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,322,429,519,620,735,812,890,970,1082,1184,1280,1389,1490,1605,1762,1867",
+                        "endColumns": "110,105,106,89,100,114,76,77,79,111,101,95,108,100,114,156,104,79",
+                        "endOffsets": "211,317,424,514,615,730,807,885,965,1077,1179,1275,1384,1485,1600,1757,1862,1942"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,322,429,519,620,735,812,890,970,1082,1184,1280,1389,1490,1605,1762,4510",
+                        "endColumns": "110,105,106,89,100,114,76,77,79,111,101,95,108,100,114,156,104,79",
+                        "endOffsets": "211,317,424,514,615,730,807,885,965,1077,1179,1275,1384,1485,1600,1757,1862,4585"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\481ff8aad82d0bb9dd82767f175c863a\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a75bf86d16c112b23ff3f918a9092d29\\res\\values-mr\\values.xml",
+                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\0b13aa906a639bae88ae176ca13b6057\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,23 +69,6 @@
                         "startOffsets": "1867,1977,2173,2299,2413,2617,2740,2878,3206,3415,3525,3707,3833,4031,4214,4304,4400",
                         "endColumns": "109,195,125,113,203,122,137,125,208,109,181,125,197,182,89,95,109",
                         "endOffsets": "1972,2168,2294,2408,2612,2735,2873,2999,3410,3520,3702,3828,4026,4209,4299,4395,4505"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bibha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5079d8fb618b1763227ec11774d8566c\\res\\values-mr\\values-mr.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,322,429,519,620,735,812,890,970,1082,1184,1280,1389,1490,1605,1762,1867",
-                        "endColumns": "110,105,106,89,100,114,76,77,79,111,101,95,108,100,114,156,104,79",
-                        "endOffsets": "211,317,424,514,615,730,807,885,965,1077,1179,1275,1384,1485,1600,1757,1862,1942"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,322,429,519,620,735,812,890,970,1082,1184,1280,1389,1490,1605,1762,4510",
-                        "endColumns": "110,105,106,89,100,114,76,77,79,111,101,95,108,100,114,156,104,79",
-                        "endOffsets": "211,317,424,514,615,730,807,885,965,1077,1179,1275,1384,1485,1600,1757,1862,4585"
                     }
                 }
             ]

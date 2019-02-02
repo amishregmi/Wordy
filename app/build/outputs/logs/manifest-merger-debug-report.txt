@@ -1,187 +1,217 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\882391ccb83f23d3df3c61d174c316b6\AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\4a81e4cacda0c50b6cfe09d758fb3c2b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\71d620c633de85447095c072efa2698c\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\204eb2133966158f09adeb6adf995e36\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\9d13407f099b8203e2ceed3c1fbffceb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\507203dd41a5adb957b7dd485f7a9afe\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\0aa68ab624f718df2b1abd9526267341\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\c2615fe6863b8eb32bde78f98d873ce5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\fe6b14d3fced91ebefe9e8a0214f730e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\5079d8fb618b1763227ec11774d8566c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\327445815d6c37e281884c2637ad404a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\4fb882fce06bfe3c93795c3e497c23a7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\1313b186706fe8060b694d9a3f24864a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\bbd755a163d358b1b5e1fdc07c3270bb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7c824379aeb86414875ad044c8491fc7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\50ddb58a2022da889c079c912d857c78\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\7c51c4940b87a4bb8d4f8c884e14597a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\22331eee507c7289a92311d2ad0ae2bb\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5d084f9fefbceab4ac37766dbaccfc1e\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3877ce107f0f1594cbbcdc9293e3cad5\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\8626a355c21063a07106673a3bece114\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ce2ead278e7440001adf2d852cc28d48\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\87132ffe968b5c438240b679f4a61960\AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ea7ef2b071ea7a2db20d392e60e6963b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\44e5478c394aedf00844537493f34b32\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\75b09e66d73260b3da6916eb87c744dd\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\3c21fec317e016a542aac1ffdf08eb68\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\d83eb6b3edba796b6bb7b303b3e916ad\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\46a4611cda3b15fd351e50f330f00efa\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\f7c2bea397037db1222d7e25b4e2b066\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\5aab8851d60a70d03899e4a7805e6b11\AndroidManifest.xml:17:1-22:12
+MERGED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:2:1-14:12
+MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\db-framework-1.0.0.aar\7c86e40e90e3b6977614f4a56828d412\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.persistence:db:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\db-1.0.0.aar\0adf1576f9efc0e8b69637440ad15b41\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\ef48ea11fd8e053e0c0b7c7d08e232de\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\328f5593e793174fe1e04c262c57e384\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4fa662a3b3c036a46597185e59801125\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9fd26b91f46a85f5232447891cd1f2c8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\195570eb4636d4e415e0497d75789678\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\a80f8979aca37f680ae5b76793f86acb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\6b5db61173f4863e46f3e2a9d99cb44f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\05fbd4401ab69fbfe237451980694ccd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\9dc8c3102c1ac67071175058edf1dc4b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\17c0907c3e13a806a5550c647d060c60\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\456a33dcb84bdd1528b3952086869989\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\85eb8631bb407ad49cf69dab9a39be49\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\990ec21d20187e54c70799978fd3f116\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\8d424a3a916ded13ee929dc6211e6383\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
 	package
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:3:5-62
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:3:5-62
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:1-41:12
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:2:11-69
 	android:installLocation
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:4:5-35
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:4:5-35
 uses-feature#android.hardware.camera
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:6:5-60
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:6:5-60
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:6:19-57
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:6:19-57
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:8:5-65
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:8:5-65
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:8:22-62
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:8:22-62
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:9:5-66
+MERGED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:12:5-67
+MERGED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:10:5-32:19
-MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\882391ccb83f23d3df3c61d174c316b6\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\882391ccb83f23d3df3c61d174c316b6\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\71d620c633de85447095c072efa2698c\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\71d620c633de85447095c072efa2698c\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\204eb2133966158f09adeb6adf995e36\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\204eb2133966158f09adeb6adf995e36\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\507203dd41a5adb957b7dd485f7a9afe\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\507203dd41a5adb957b7dd485f7a9afe\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\0aa68ab624f718df2b1abd9526267341\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\0aa68ab624f718df2b1abd9526267341\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:22:5-26:19
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:11:5-39:19
+MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\87132ffe968b5c438240b679f4a61960\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\87132ffe968b5c438240b679f4a61960\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\75b09e66d73260b3da6916eb87c744dd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\75b09e66d73260b3da6916eb87c744dd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\3c21fec317e016a542aac1ffdf08eb68\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\3c21fec317e016a542aac1ffdf08eb68\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\46a4611cda3b15fd351e50f330f00efa\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\46a4611cda3b15fd351e50f330f00efa\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\f7c2bea397037db1222d7e25b4e2b066\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\f7c2bea397037db1222d7e25b4e2b066\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:22:5-26:19
 	android:supportsRtl
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:16:9-37
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:17:9-37
 	android:label
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:15:9-37
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:16:9-37
 	android:hardwareAccelerated
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:14:9-43
 	android:fullBackupContent
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:12:9-42
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:13:9-42
 	android:icon
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:14:9-38
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:15:9-38
 	android:allowBackup
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:17:9-47
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:18:9-47
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:18:9-20:69
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:23:9-25:69
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:23:9-25:69
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:19:9-21:69
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:20:13-66
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:21:13-66
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:19:13-58
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:20:13-58
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:21:9-23:35
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:22:9-24:35
 	android:value
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:23:13-32
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:24:13-32
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:22:13-70
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:23:13-70
 activity#com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:25:9-31:20
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:26:9-32:20
 	android:label
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:26:13-38
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:27:13-38
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:25:19-100
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:26:19-100
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:27:13-30:29
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:30:27-74
+activity#com.google.android.gms.samples.vision.ocrreader.Saved
+ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:34:9-38:20
+	android:parentActivityName
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:36:13-61
+	android:label
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:35:13-34
+	android:name
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml:34:19-40
 uses-sdk
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\882391ccb83f23d3df3c61d174c316b6\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\882391ccb83f23d3df3c61d174c316b6\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\4a81e4cacda0c50b6cfe09d758fb3c2b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\4a81e4cacda0c50b6cfe09d758fb3c2b\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\71d620c633de85447095c072efa2698c\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\71d620c633de85447095c072efa2698c\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\204eb2133966158f09adeb6adf995e36\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\204eb2133966158f09adeb6adf995e36\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\9d13407f099b8203e2ceed3c1fbffceb\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\9d13407f099b8203e2ceed3c1fbffceb\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\507203dd41a5adb957b7dd485f7a9afe\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\507203dd41a5adb957b7dd485f7a9afe\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\0aa68ab624f718df2b1abd9526267341\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\0aa68ab624f718df2b1abd9526267341\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\bd36312a6c8444528f6c831c8a1dae45\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\c2615fe6863b8eb32bde78f98d873ce5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\c2615fe6863b8eb32bde78f98d873ce5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\fe6b14d3fced91ebefe9e8a0214f730e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\fe6b14d3fced91ebefe9e8a0214f730e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\5079d8fb618b1763227ec11774d8566c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\5079d8fb618b1763227ec11774d8566c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\327445815d6c37e281884c2637ad404a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\327445815d6c37e281884c2637ad404a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\4fb882fce06bfe3c93795c3e497c23a7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\4fb882fce06bfe3c93795c3e497c23a7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\1313b186706fe8060b694d9a3f24864a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\1313b186706fe8060b694d9a3f24864a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\bbd755a163d358b1b5e1fdc07c3270bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\bbd755a163d358b1b5e1fdc07c3270bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7c824379aeb86414875ad044c8491fc7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7c824379aeb86414875ad044c8491fc7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\50ddb58a2022da889c079c912d857c78\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\50ddb58a2022da889c079c912d857c78\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\7c51c4940b87a4bb8d4f8c884e14597a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\7c51c4940b87a4bb8d4f8c884e14597a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\22331eee507c7289a92311d2ad0ae2bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\22331eee507c7289a92311d2ad0ae2bb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5d084f9fefbceab4ac37766dbaccfc1e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5d084f9fefbceab4ac37766dbaccfc1e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3877ce107f0f1594cbbcdc9293e3cad5\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3877ce107f0f1594cbbcdc9293e3cad5\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\8626a355c21063a07106673a3bece114\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\8626a355c21063a07106673a3bece114\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ce2ead278e7440001adf2d852cc28d48\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ce2ead278e7440001adf2d852cc28d48\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\87132ffe968b5c438240b679f4a61960\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.0.aar\87132ffe968b5c438240b679f4a61960\AndroidManifest.xml:5:5-44
+MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ea7ef2b071ea7a2db20d392e60e6963b\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ea7ef2b071ea7a2db20d392e60e6963b\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:design:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\44e5478c394aedf00844537493f34b32\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\44e5478c394aedf00844537493f34b32\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\75b09e66d73260b3da6916eb87c744dd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-15.0.0.aar\75b09e66d73260b3da6916eb87c744dd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\3c21fec317e016a542aac1ffdf08eb68\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-15.0.1.aar\3c21fec317e016a542aac1ffdf08eb68\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\d83eb6b3edba796b6bb7b303b3e916ad\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\d83eb6b3edba796b6bb7b303b3e916ad\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\46a4611cda3b15fd351e50f330f00efa\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-15.0.1.aar\46a4611cda3b15fd351e50f330f00efa\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\f7c2bea397037db1222d7e25b4e2b066\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\f7c2bea397037db1222d7e25b4e2b066\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\481ff8aad82d0bb9dd82767f175c863a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\5aab8851d60a70d03899e4a7805e6b11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\5aab8851d60a70d03899e4a7805e6b11\AndroidManifest.xml:20:5-44
+MERGED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:7:5-9:41
+MERGED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\db-framework-1.0.0.aar\7c86e40e90e3b6977614f4a56828d412\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\db-framework-1.0.0.aar\7c86e40e90e3b6977614f4a56828d412\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\db-1.0.0.aar\0adf1576f9efc0e8b69637440ad15b41\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db:1.0.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\db-1.0.0.aar\0adf1576f9efc0e8b69637440ad15b41\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\ef48ea11fd8e053e0c0b7c7d08e232de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\ef48ea11fd8e053e0c0b7c7d08e232de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\328f5593e793174fe1e04c262c57e384\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\328f5593e793174fe1e04c262c57e384\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4fa662a3b3c036a46597185e59801125\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4fa662a3b3c036a46597185e59801125\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9fd26b91f46a85f5232447891cd1f2c8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9fd26b91f46a85f5232447891cd1f2c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\195570eb4636d4e415e0497d75789678\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\195570eb4636d4e415e0497d75789678\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\a80f8979aca37f680ae5b76793f86acb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\a80f8979aca37f680ae5b76793f86acb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\6b5db61173f4863e46f3e2a9d99cb44f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\6b5db61173f4863e46f3e2a9d99cb44f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\05fbd4401ab69fbfe237451980694ccd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\05fbd4401ab69fbfe237451980694ccd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\9dc8c3102c1ac67071175058edf1dc4b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\9dc8c3102c1ac67071175058edf1dc4b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\17c0907c3e13a806a5550c647d060c60\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\17c0907c3e13a806a5550c647d060c60\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\456a33dcb84bdd1528b3952086869989\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\456a33dcb84bdd1528b3952086869989\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\85eb8631bb407ad49cf69dab9a39be49\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\85eb8631bb407ad49cf69dab9a39be49\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\990ec21d20187e54c70799978fd3f116\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\990ec21d20187e54c70799978fd3f116\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\8d424a3a916ded13ee929dc6211e6383\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\8d424a3a916ded13ee929dc6211e6383\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\bibha\Desktop\wordie\android-vision-master\android-vision-master\visionSamples\ocr-codelab\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibha\Desktop\ocr-reader-complete\app\src\main\AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a75bf86d16c112b23ff3f918a9092d29\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\0b13aa906a639bae88ae176ca13b6057\AndroidManifest.xml:24:13-79
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from [com.microsoft.cognitiveservices.speech:client-sdk:1.2.0] C:\Users\bibha\.gradle\caches\transforms-1\files-1.1\client-sdk-1.2.0.aar\1226e675e5770b7e0ee33cf60d7b80ff\AndroidManifest.xml:11:22-68

@@ -27,6 +27,8 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -37,6 +39,8 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -47,15 +51,37 @@ import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
+import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
+import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
+import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationResult;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
+import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeechRecognitionResult;
+
+import com.microsoft.cognitiveservices.speech.internal.ResultReason;
+import com.microsoft.cognitiveservices.speech.internal.SpeechConfig;
+import java.util.concurrent.Future;
+
+import static android.Manifest.permission.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Locale;
+import java.util.concurrent.Future;
 
 /**
  * Activity for the Ocr Detecting app.  This app detects text and displays the value with the
  * rear facing camera. During detection overlay graphics are drawn to indicate the position,
  * size, and contents of each TextBlock.
  */
-public final class OcrCaptureActivity extends AppCompatActivity {
+public final class OcrCaptureActivity extends AppCompatActivity implements AsyncResponse {
+
+    // Replace below with your own subscription key
+    private static String speechSubscriptionKey = "9dbfa487c11744a0905058796c82b57c";
+    // Replace below with your own service region (e.g., "westus").
+    private static String serviceRegion = "westus";
+
+    private String word;
+    private String translatedWord;
+
     private static final String TAG = "OcrCaptureActivity";
 
     // Intent request code to handle updating play services if needed.
@@ -95,6 +121,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         boolean autoFocus = true;
         boolean useFlash = false;
 
+        addDropDown();
         // Check for the camera permission before accessing the camera.  If the
         // permission is not granted yet, request permission.
         int rc = ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
@@ -126,6 +153,19 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
     }
+
+    public void addDropDown() {
+
+        System.out.println("Inside Main Activity2");
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.toTranslate, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
+    }
+
 
     /**
      * Handles the requesting of the camera permission.  This includes
@@ -343,21 +383,19 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         LocateWord.setCoordinates(rawX, rawY);
 
         //get the graphicOverlay view's location and store it
-        //LocateWord.setViewLocation(graphicOverlay.getLocOnScreen());
-        LocateWord.setViewLocation(preview.getLocOnScreen());
+        LocateWord.setViewLocation(graphicOverlay.getLocOnScreen());
 
         OcrGraphic graphic = graphicOverlay.getGraphicAtLocation(rawX, rawY);
         TextBlock text = null;
         if (graphic != null) {
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
-                //Log.d(TAG, "text data is being spoken! " + text.getValue());
+                Log.d(TAG, "text data is being spoken! " + text.getValue());
                 // Speak the string.
                 //tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
-                displayDialogBox(text.getValue());
-
-                // TODO: clear hashmap as graphic is cleared
-                //LocateWord.clear();
+                ArrayList<String> uniqueWords = LocateWord.filterUniqueWords(LocateWord.findWord());
+                displayWordOption(uniqueWords);
+                //displayDialogBox(text.getValue());
             }
             else {
                 Log.d(TAG, "text data is null");
@@ -369,14 +407,33 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         return text != null;
     }
 
+    //making the app cover the entire screen
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        View decorView = getWindow().getDecorView();
+        if(hasFocus){
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE   //for transition to be stable
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY                      //swipe down, it will swipe up
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN                     //to remove any artifacts for the transition in the full screen
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN                            //have the full screen
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);                     //hide the navigation bar
+        }
+    }
+/*
     private void displayDialogBox(String text){
         String tran = "Translated Coordinates: " + LocateWord.getCoordinates().first + " " + LocateWord.getCoordinates().second;
         String raw = "\nRaw Coordinates: " + LocateWord.getRawCoordinates().first + " " +LocateWord.getRawCoordinates().second;
         AlertDialog.Builder prompt = new AlertDialog.Builder(this);
         prompt.setTitle("Your Word");
-        prompt.setMessage(tran + "\n" + raw + "\nWord clicked: " + LocateWord.findWord() + LocateWord.getbounds()+ "\n" + text);// + "\n" + LocateWord.getbounds());//LocateWord.getMap().keySet().toString());
+        ArrayList<String> uniqueWords = LocateWord.filterUniqueWords(LocateWord.findWord());
+
+        //prompt.setMessage(tran + "\n" + raw + "\nWord clicked: " + LocateWord.findWord() + LocateWord.getbounds()+ "\n" + text);// + "\n" + LocateWord.getbounds());//LocateWord.getMap().keySet().toString());
+        prompt.setMessage("\n" + uniqueWords);
         prompt.show();
     }
+*/
 
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
 
@@ -440,5 +497,167 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 cameraSource.doZoom(detector.getScaleFactor());
             }
         }
+    }
+
+
+    // On Click function to show intent of dictionary/database
+    public void showAllWordAndMeaning(View view) {
+        Log.d(OcrCaptureActivity.class.getName(), "showAllWordAndMeaning button clicked !");
+        Intent intent = new Intent(this, Saved.class);
+        startActivity(intent);
+    }
+
+    /*-----------------ANUJ--------------*/
+    public void displayWordOption( ArrayList<String> unique){
+        final String uniqueWords[] = new String[unique.size()];
+        for(int i = 0; i < unique.size(); i++ ){
+            uniqueWords[i] = unique.get(i);
+        }
+        System.out.println("The string array is " + uniqueWords.toString());
+        final AlertDialog.Builder prompt = new AlertDialog.Builder(this);
+        prompt.setItems(uniqueWords, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                System.out.println("Int which is " + uniqueWords[which]);
+                String finalWord = uniqueWords[which];
+                word = finalWord;
+                displayMeaningBox(finalWord);
+            }
+        });
+        prompt.show();
+    }
+
+    public void displayMeaningBox(String finalWord){
+        CallbackTask callbackTask = new CallbackTask();
+        callbackTask.delegate = this;
+        callbackTask.execute(dictionaryEntries());
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // returns string
+
+    private String dictionaryEntries() {
+        final String language = "en";
+        System.out.println("User input is " + word);
+        final String word_id = word.toLowerCase(); //word id is case sensitive and lowercase is required
+        return "https://od-api.oxforddictionaries.com:443/api/v1/entries/" + language + "/" + word_id;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // This function is called when the AsyncTask is finished
+    // The Asynctask is called to get meaning of a word
+    @Override
+    public void processFinish(final String output) {
+        doTranslation();
+        System.out.println("The output in process finish is " + output);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle(word);
+        alertDialog.setMessage(output + "\n\n" + "Translation: " + translatedWord);
+        alertDialog.setPositiveButton("Save Word?", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                System.out.println("Save Button Clicked");
+                saveWordAndMeaning(word, output);
+                // now pass word and its meaning to save function
+            }
+        });
+        alertDialog.show();
+    }
+
+    public void doTranslation(){
+        Spinner spinner = findViewById(R.id.spinner);
+
+        String languageToTranslate = spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
+
+        System.out.println("The language translated to selected is " + languageToTranslate);
+
+        if ( !languageToTranslate.equals("None")){
+            String langCode = "en-" +getLanguageCode(languageToTranslate);
+            System.out.println("The lang code is " + langCode);
+            translateLanguageNow(langCode);
+        }
+        else{
+            translatedWord = "";
+        }
+    }
+
+    public void saveWordAndMeaning(String word, String meaning) {
+        if ("".equals(word)){
+            Toast.makeText(OcrCaptureActivity.this, "word field empty", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if ("".equals(meaning)){
+            Toast.makeText(OcrCaptureActivity.this, "meaning field empty", Toast.LENGTH_LONG).show();
+            return;
+        }
+        Log.d(OcrCaptureActivity.class.getName(), "Rows Count bhanda agadi in main");
+        DatabaseInitializer.populateAsync(AppDatabase.getAppDatabase(this), word, meaning);
+    }
+
+    // Api Call to translate the given word
+    // takes language code as a parameter
+    public void translateLanguageNow(String langCode){
+        System.out.println("Inside Translate Language function");
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        IamOptions options = new IamOptions.Builder()
+                .apiKey("eLS9MVEjVdtEK-MSXDYhgUnuE04zsPfYlGmLMX2ldVwk")
+                .build();
+
+        LanguageTranslator languageTranslator = new LanguageTranslator(
+                "2018-05-01",
+                options
+        );
+
+        languageTranslator.setEndPoint("https://gateway-wdc.watsonplatform.net/language-translator/api");
+
+        TranslateOptions translateOptions = new TranslateOptions.Builder()
+                .addText(word)
+                .modelId(langCode)
+                .build();
+
+        TranslationResult result = languageTranslator.translate(translateOptions)
+                .execute();
+
+        System.out.print("The translated result is " + result);
+        translatedWord = result.getTranslations().get(0).getTranslationOutput();
+        System.out.println("Translate word is " + translatedWord);
+    }
+
+    // Returns universal language code
+    // Each language code is related to specific languages
+    // The language code is then used while calling IBM api to get translated word
+    public String getLanguageCode(String name){
+        String code = "de";
+        if ( name.equals("German")){
+            code = "de";
+        }
+        else if ( name.equals("Indian")){
+            code = "hi";
+        }
+        else if ( name.equals("Japanese")){
+            code = "ja";
+        }
+        else if ( name.equals("Russian")){
+            code = "ru";
+        }
+        else if ( name.equals("Chinese")){
+            code = "zh";
+        }
+        else if ( name.equals("Spanish")){
+            code = "es";
+        }
+        else if ( name.equals("Italian")){
+            code = "it";
+        }
+
+        return code;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    //AMISH
+    public void performAudio(View v) {
     }
 }

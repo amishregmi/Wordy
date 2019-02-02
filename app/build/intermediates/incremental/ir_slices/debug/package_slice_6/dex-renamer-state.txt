@@ -1,4 +1,4 @@
-#Thu Jan 31 21:04:52 EST 2019
-base.0=C\:\\Users\\bibha\\Desktop\\wordie\\android-vision-master\\android-vision-master\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+#Fri Feb 01 23:55:31 EST 2019
+base.0=C\:\\Users\\bibha\\Desktop\\ocr-reader-complete\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

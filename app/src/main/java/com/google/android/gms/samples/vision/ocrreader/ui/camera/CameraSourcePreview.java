@@ -200,10 +200,4 @@ public class CameraSourcePreview extends ViewGroup {
         Log.d(TAG, "isPortraitMode returning false by default");
         return false;
     }
-
-    public int [] getLocOnScreen(){
-        int [] location = new int[2];
-        this.getLocationOnScreen(location);
-        return location;
-    }
 }
