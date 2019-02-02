@@ -1,10 +1,10 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
 import android.arch.persistence.db.SupportSQLiteStatement;
-import android.arch.persistence.room.EntityDeletionOrUpdateAdapter;
 import android.arch.persistence.room.EntityInsertionAdapter;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.RoomSQLiteQuery;
+import android.arch.persistence.room.SharedSQLiteStatement;
 import android.database.Cursor;
 import java.lang.Override;
 import java.lang.String;
@@ -16,40 +16,35 @@ public class BibDataDao_Impl implements BibDataDao {
 
   private final EntityInsertionAdapter __insertionAdapterOfBibData;
 
-  private final EntityDeletionOrUpdateAdapter __deletionAdapterOfBibData;
+  private final SharedSQLiteStatement __preparedStmtOfDelete;
 
   public BibDataDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfBibData = new EntityInsertionAdapter<BibData>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `BibData`(`uid`,`word`,`meaning`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR REPLACE INTO `BibData`(`word`,`meaning`) VALUES (?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, BibData value) {
-        stmt.bindLong(1, value.getUid());
         if (value.getWord() == null) {
-          stmt.bindNull(2);
+          stmt.bindNull(1);
         } else {
-          stmt.bindString(2, value.getWord());
+          stmt.bindString(1, value.getWord());
         }
         if (value.getMeaning() == null) {
-          stmt.bindNull(3);
+          stmt.bindNull(2);
         } else {
-          stmt.bindString(3, value.getMeaning());
+          stmt.bindString(2, value.getMeaning());
         }
       }
     };
-    this.__deletionAdapterOfBibData = new EntityDeletionOrUpdateAdapter<BibData>(__db) {
+    this.__preparedStmtOfDelete = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `BibData` WHERE `uid` = ?";
-      }
-
-      @Override
-      public void bind(SupportSQLiteStatement stmt, BibData value) {
-        stmt.bindLong(1, value.getUid());
+        final String _query = "DELETE FROM bibdata WHERE word= ?";
+        return _query;
       }
     };
   }
@@ -66,13 +61,21 @@ public class BibDataDao_Impl implements BibDataDao {
   }
 
   @Override
-  public void delete(BibData bibData) {
+  public void delete(String word) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDelete.acquire();
     __db.beginTransaction();
     try {
-      __deletionAdapterOfBibData.handle(bibData);
+      int _argIndex = 1;
+      if (word == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, word);
+      }
+      _stmt.executeUpdateDelete();
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
+      __preparedStmtOfDelete.release(_stmt);
     }
   }
 
@@ -82,16 +85,12 @@ public class BibDataDao_Impl implements BibDataDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfUid = _cursor.getColumnIndexOrThrow("uid");
       final int _cursorIndexOfWord = _cursor.getColumnIndexOrThrow("word");
       final int _cursorIndexOfMeaning = _cursor.getColumnIndexOrThrow("meaning");
       final List<BibData> _result = new ArrayList<BibData>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final BibData _item;
         _item = new BibData();
-        final int _tmpUid;
-        _tmpUid = _cursor.getInt(_cursorIndexOfUid);
-        _item.setUid(_tmpUid);
         final String _tmpWord;
         _tmpWord = _cursor.getString(_cursorIndexOfWord);
         _item.setWord(_tmpWord);

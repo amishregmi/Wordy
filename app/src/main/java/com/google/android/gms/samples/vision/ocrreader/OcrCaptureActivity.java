@@ -163,13 +163,13 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         ActivityCompat.requestPermissions(OcrCaptureActivity.this, new String[]{RECORD_AUDIO, INTERNET}, requestCode);
 
         // Set up Swipe to change activity
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.topLayout);
+        /*LinearLayout linearLayout = (LinearLayout) findViewById(R.id.topLayout);
         linearLayout.setOnTouchListener(new OnSwipeTouchListener(OcrCaptureActivity.this) {
             public void onSwipeTop() {
                 Toast.makeText(OcrCaptureActivity.this, "top", Toast.LENGTH_SHORT).show();
 
             }
-            public void onSwipeRight() {/
+            public void onSwipeRight() {
                 Toast.makeText(OcrCaptureActivity.this, "right", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(OcrCaptureActivity.this, Saved.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -182,7 +182,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                 Toast.makeText(OcrCaptureActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
 
-        });
+        });*/
 
     }
 
@@ -427,7 +427,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                 //tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
                 ArrayList<String> uniqueWords = LocateWord.filterUniqueWords(LocateWord.findWord());
                 displayWordOption(uniqueWords);
-                //displayDialogBox(text.getValue());
             }
             else {
                 Log.d(TAG, "text data is null");
@@ -439,6 +438,13 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         return text != null;
     }
 
+    /*private boolean onSwipeUp(){
+        Toast.makeText(OcrCaptureActivity.this, "right", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(OcrCaptureActivity.this, Saved.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        return true;
+    }*/
     //making the app cover the entire screen
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -453,19 +459,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                     | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);                     //hide the navigation bar
         }
     }
-/*
-    private void displayDialogBox(String text){
-        String tran = "Translated Coordinates: " + LocateWord.getCoordinates().first + " " + LocateWord.getCoordinates().second;
-        String raw = "\nRaw Coordinates: " + LocateWord.getRawCoordinates().first + " " +LocateWord.getRawCoordinates().second;
-        AlertDialog.Builder prompt = new AlertDialog.Builder(this);
-        prompt.setTitle("Your Word");
-        ArrayList<String> uniqueWords = LocateWord.filterUniqueWords(LocateWord.findWord());
-
-        //prompt.setMessage(tran + "\n" + raw + "\nWord clicked: " + LocateWord.findWord() + LocateWord.getbounds()+ "\n" + text);// + "\n" + LocateWord.getbounds());//LocateWord.getMap().keySet().toString());
-        prompt.setMessage("\n" + uniqueWords);
-        prompt.show();
-    }
-*/
 
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
 
@@ -473,6 +466,11 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         public boolean onSingleTapConfirmed(MotionEvent e) {
             return onTap(e.getRawX(), e.getRawY()) || super.onSingleTapConfirmed(e);
         }
+
+        /*@Override
+        public boolean onSingleTapUp(MotionEvent e){
+            return onSwipeUp() || super.onSingleTapUp(e.);
+        }*/
     }
 
     private class ScaleListener implements ScaleGestureDetector.OnScaleGestureListener {
@@ -753,4 +751,14 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         }
 
     }
+
+
+//    public void deleteWordAndMeaning(View view){
+//        String word = mtextViewWord.getText().toString();
+//        if ("".equals(word)){
+//            Toast.makeText(MainActivity.this, "word field empty", Toast.LENGTH_LONG).show();
+//            return;
+//        }
+//        DatabaseInitializer.deleteAsync(AppDatabase.getAppDatabase(this), word);
+//    }
 }

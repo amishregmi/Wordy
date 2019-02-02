@@ -19,7 +19,7 @@ public class Saved extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved);
         List<BibData> resultListBibData;
-        resultListBibData = DatabaseGetter.getDatabase(AppDatabase.getAppDatabase(this));
+        resultListBibData = DatabaseInitializer.getDatabase(AppDatabase.getAppDatabase(this));
 
         Log.d(Saved.class.getName(), "Null case bhanda agadi");
         RelativeLayout rl=(RelativeLayout)findViewById(R.id.rl);

@@ -24,9 +24,9 @@ public class AppDatabase_Impl extends AppDatabase {
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `BibData` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `word` TEXT, `meaning` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `BibData` (`word` TEXT NOT NULL, `meaning` TEXT, PRIMARY KEY(`word`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"28499724047217922218f519687c83de\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2ec7bc407a4ccc0a9c89568cf731d8a3\")");
       }
 
       public void dropAllTables(SupportSQLiteDatabase _db) {
@@ -52,9 +52,8 @@ public class AppDatabase_Impl extends AppDatabase {
       }
 
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsBibData = new HashMap<String, TableInfo.Column>(3);
-        _columnsBibData.put("uid", new TableInfo.Column("uid", "INTEGER", true, 1));
-        _columnsBibData.put("word", new TableInfo.Column("word", "TEXT", false, 0));
+        final HashMap<String, TableInfo.Column> _columnsBibData = new HashMap<String, TableInfo.Column>(2);
+        _columnsBibData.put("word", new TableInfo.Column("word", "TEXT", true, 1));
         _columnsBibData.put("meaning", new TableInfo.Column("meaning", "TEXT", false, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysBibData = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesBibData = new HashSet<TableInfo.Index>(0);
@@ -66,7 +65,7 @@ public class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingBibData);
         }
       }
-    }, "28499724047217922218f519687c83de");
+    }, "2ec7bc407a4ccc0a9c89568cf731d8a3");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
