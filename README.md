@@ -1,2 +1,2 @@
 # Wordy
-Text Recognizer
+Word Recognition, translation and personalized dictionary
