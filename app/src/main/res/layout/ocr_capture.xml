@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -26,13 +26,22 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="performAudio"
-            app:srcCompat="@drawable/microphone" />
+            app:srcCompat="@drawable/microphone"
+            android:contentDescription="TODO" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown" />
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_weight="1" />
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:spinnerMode="dialog" />
     </LinearLayout>
 
     <com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePreview

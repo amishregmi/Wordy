@@ -157,38 +157,20 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                     }
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
+
         //FOR VOICE--------------------------------
-        // Note: we need to request the permissions
         int requestCode = 5; // unique code for the permission request
+
+        // Need to request the permissions
         ActivityCompat.requestPermissions(OcrCaptureActivity.this, new String[]{RECORD_AUDIO, INTERNET}, requestCode);
-
-        // Set up Swipe to change activity
-        /*LinearLayout linearLayout = (LinearLayout) findViewById(R.id.topLayout);
-        linearLayout.setOnTouchListener(new OnSwipeTouchListener(OcrCaptureActivity.this) {
-            public void onSwipeTop() {
-                Toast.makeText(OcrCaptureActivity.this, "top", Toast.LENGTH_SHORT).show();
-
-            }
-            public void onSwipeRight() {
-                Toast.makeText(OcrCaptureActivity.this, "right", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(OcrCaptureActivity.this, Saved.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-            }
-            public void onSwipeLeft() {
-                Toast.makeText(OcrCaptureActivity.this, "left", Toast.LENGTH_SHORT).show();
-            }
-            public void onSwipeBottom() {
-                Toast.makeText(OcrCaptureActivity.this, "bottom", Toast.LENGTH_SHORT).show();
-            }
-
-        });*/
-
     }
 
+    /**
+     * adds spinners
+     * spinner for toTranslate language
+     * spinner2 for fromTranslate language
+     */
     public void addDropDown() {
-
-        System.out.println("Inside Main Activity2");
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.toTranslate, android.R.layout.simple_spinner_item);
@@ -196,6 +178,14 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.fromTranslate, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner2.setAdapter(adapter2);
     }
 
 
@@ -260,19 +250,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         textRecognizer.setProcessor(new OcrDetectorProcessor(graphicOverlay));
 
         if (!textRecognizer.isOperational()) {
-            // Note: The first time that an app using a Vision API is installed on a
-            // device, GMS will download a native libraries to the device in order to do detection.
-            // Usually this completes before the app is run for the first time.  But if that
-            // download has not yet completed, then the above call will not detect any text,
-            // barcodes, or faces.
-            //
-            // isOperational() can be used to check if the required native libraries are currently
-            // available.  The detectors will automatically become operational once the library
-            // downloads complete on device.
             Log.w(TAG, "Detector dependencies are not yet available.");
 
-            // Check for low storage.  If there is low storage, the native library will not be
-            // downloaded, so detection will not become operational.
             IntentFilter lowstorageFilter = new IntentFilter(Intent.ACTION_DEVICE_STORAGE_LOW);
             boolean hasLowStorage = registerReceiver(null, lowstorageFilter) != null;
 
@@ -282,8 +261,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
             }
         }
 
-        // Creates and starts the camera.  Note that this uses a higher resolution in comparison
-        // to other detection examples to enable the text recognizer to detect small pieces of text.
+        // Creates and starts the camera.
         cameraSource =
                 new CameraSource.Builder(getApplicationContext(), textRecognizer)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
@@ -413,10 +391,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
     private boolean onTap(float rawX, float rawY) {
         //store the raw x,y coordinates
         LocateWord.setCoordinates(rawX, rawY);
-
         //get the graphicOverlay view's location and store it
         LocateWord.setViewLocation(graphicOverlay.getLocOnScreen());
-
         OcrGraphic graphic = graphicOverlay.getGraphicAtLocation(rawX, rawY);
         TextBlock text = null;
         if (graphic != null) {
@@ -438,13 +414,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         return text != null;
     }
 
-    /*private boolean onSwipeUp(){
-        Toast.makeText(OcrCaptureActivity.this, "right", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(OcrCaptureActivity.this, Saved.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-        return true;
-    }*/
     //making the app cover the entire screen
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -466,11 +435,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         public boolean onSingleTapConfirmed(MotionEvent e) {
             return onTap(e.getRawX(), e.getRawY()) || super.onSingleTapConfirmed(e);
         }
-
-        /*@Override
-        public boolean onSingleTapUp(MotionEvent e){
-            return onSwipeUp() || super.onSingleTapUp(e.);
-        }*/
     }
 
     private class ScaleListener implements ScaleGestureDetector.OnScaleGestureListener {
@@ -529,7 +493,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         }
     }
 
-
     // On Click function to show intent of dictionary/database
     public void showAllWordAndMeaning(View view) {
         Log.d(OcrCaptureActivity.class.getName(), "showAllWordAndMeaning button clicked !");
@@ -537,7 +500,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         startActivity(intent);
     }
 
-    /*-----------------ANUJ--------------*/
     public void displayWordOption( ArrayList<String> unique){
         final String uniqueWords[] = new String[unique.size()];
         for(int i = 0; i < unique.size(); i++ ){
@@ -557,14 +519,14 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         prompt.show();
     }
 
+    /**
+     * Initializes Callback
+     */
     public void findMeaning(String finalWord){
         CallbackTask callbackTask = new CallbackTask();
         callbackTask.delegate = this;
         callbackTask.execute(dictionaryEntries());
     }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    // returns string
 
     private String dictionaryEntries() {
         final String language = "en";
@@ -573,9 +535,10 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         return "https://od-api.oxforddictionaries.com:443/api/v1/entries/" + language + "/" + word_id;
     }
 
-    // -----------------------------------------------------------------------------------------------------------------
-    // This function is called when the AsyncTask is finished
-    // The Asynctask is called to get meaning of a word
+    /**
+     * This function is called when the AsyncTask is finished
+     * The Asynctask is called to get meaning of a word
+     */
     @Override
     public void processFinish(final String output) {
         doTranslation();
@@ -583,27 +546,34 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle(word);
         alertDialog.setMessage(output + "\n\n" + "Translation: " + translatedWord);
-        alertDialog.setPositiveButton("Save Word?", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                System.out.println("Save Button Clicked");
-                saveWordAndMeaning(word, output);
-                // now pass word and its meaning to save function
-            }
-        });
+        alertDialog
+                .setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        saveWordAndMeaning(word, output);
+                    }
+                })
+                .setNegativeButton("Hear", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        tts.speak(output, TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                    }
+                });
         alertDialog.show();
     }
 
+    /**
+     * Performs translation
+     */
     public void doTranslation(){
         Spinner spinner = findViewById(R.id.spinner);
+        Spinner spinner2 = findViewById(R.id.spinner2);
 
+        String languageFromTranslate = spinner2.getItemAtPosition(spinner2.getSelectedItemPosition()).toString();
         String languageToTranslate = spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
 
-        System.out.println("The language translated to selected is " + languageToTranslate);
-
         if ( !languageToTranslate.equals("None")){
-            String langCode = "en-" +getLanguageCode(languageToTranslate);
-            System.out.println("The lang code is " + langCode);
+            String langCode = getLanguageCode(languageFromTranslate) + "-" +getLanguageCode(languageToTranslate);
             translateLanguageNow(langCode);
         }
         else{
@@ -611,6 +581,9 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         }
     }
 
+    /**
+     * Saves word and meaning to the database
+     */
     public void saveWordAndMeaning(String word, String meaning) {
         if ("".equals(word)){
             Toast.makeText(OcrCaptureActivity.this, "word field empty", Toast.LENGTH_LONG).show();
@@ -624,8 +597,10 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         DatabaseInitializer.populateAsync(AppDatabase.getAppDatabase(this), word, meaning);
     }
 
-    // Api Call to translate the given word
-    // takes language code as a parameter
+    /**
+     * Api Call to translate the given word
+     * @param langCode Language Code
+     */
     public void translateLanguageNow(String langCode){
         System.out.println("Inside Translate Language function");
 
@@ -651,24 +626,63 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         TranslationResult result = languageTranslator.translate(translateOptions)
                 .execute();
 
-        System.out.print("The translated result is " + result);
         translatedWord = result.getTranslations().get(0).getTranslationOutput();
-        System.out.println("Translate word is " + translatedWord);
     }
 
-    // Returns universal language code
-    // Each language code is related to specific languages
-    // The language code is then used while calling IBM api to get translated word
+    /**
+     * Establishes Language name to language code
+     * @param name Language name
+     * @return code language code
+     */
     public String getLanguageCode(String name){
         String code = "de";
         if ( name.equals("German")){
             code = "de";
         }
-        else if ( name.equals("Indian")){
+        else if (name.equals("Arabic")){
+            code = "ar";
+        }
+        else if (name.equals("Czech")){
+            code = "cs";
+        }
+        else if (name.equals("Danish")){
+            code = "da";
+        }
+        else if (name.equals("Dutch")){
+            code = "nl";
+        }
+        else if (name.equals("English")){
+            code = "en";
+        }
+        else if (name.equals("Finnish")){
+            code = "fi";
+        }
+        else if (name.equals("French")){
+            code = "fr";
+        }
+        else if ( name.equals("Hindi")){
             code = "hi";
+        }
+        else if (name.equals("Hungarian")){
+            code = "hu";
+        }
+        else if (name.equals("Italian")){
+            code = "it";
         }
         else if ( name.equals("Japanese")){
             code = "ja";
+        }
+        else if (name.equals("Korean")){
+            code = "ko";
+        }
+        else if (name.equals("Norwegian")){
+            code = "no";
+        }
+        else if (name.equals("Polish")){
+            code = "pl";
+        }
+        else if (name.equals("Portuguese")){
+            code = "pt";
         }
         else if ( name.equals("Russian")){
             code = "ru";
@@ -679,18 +693,19 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         else if ( name.equals("Spanish")){
             code = "es";
         }
-        else if ( name.equals("Italian")){
-            code = "it";
+        else if ( name.equals("Swedish")){
+            code = "sv";
+        }
+        else if ( name.equals("Turkish")){
+            code = "tr";
         }
 
         return code;
     }
 
-    // -----------------------------------------------------------------------------------------------------------------
-    //AMISH
+    //Records audio and converts it to text
     public void performAudio(View v) {
-        Toast.makeText(this, "Audio recording...", Toast.LENGTH_LONG);
-        System.out.println("Reacheddddd");
+        Toast.makeText(this, "Audio recording...", Toast.LENGTH_LONG).show();
         try {
             SpeechConfig config = SpeechConfig.fromSubscription(speechSubscriptionKey, serviceRegion);
             assert(config != null);
@@ -708,57 +723,36 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
 
             if (result.getReason() == ResultReason.RecognizedSpeech) {
                 String whole_string = result.toString();
-                //txt.setText(result.toString());
 
                 int last_openbrac_pos = whole_string.lastIndexOf("<");
 
                 System.out.println("The position of < is: "+last_openbrac_pos);
-                System.out.println("Reachedddd 2");
                 int total_string_length = whole_string.length();
 
                 //Stores the input word.
-                String spokensentence = whole_string.substring(last_openbrac_pos+1, total_string_length-3);
-                System.out.println("The spoken sentence is: "+spokensentence);
-                System.out.println("Reachedddd 3 "+spokensentence);
-
-                //txt.setText("The spoken sentence is: " +spokensentence);
+                String spokenSentence = whole_string.substring(last_openbrac_pos+1, total_string_length-3);
+                System.out.println("The spoken sentence is: "+spokenSentence);
 
                 //Extracting the first word from the result.
-                int firstspace = spokensentence.indexOf(' ');
+                int firstspace = spokenSentence.indexOf(' ');
                 if (firstspace!=-1){
 
-                    String first_spoken_word = spokensentence.substring(0,firstspace);
+                    String first_spoken_word = spokenSentence.substring(0,firstspace);
                     first_spoken_word=first_spoken_word.replace(",","");
-                    spokensentence = first_spoken_word;
+                    spokenSentence = first_spoken_word;
                     //spokensentence.substring(firstspace);
-
-                    System.out.println("The first word spoken is: "+first_spoken_word);
-                    //txt.setText("The first spoken word is: "+first_spoken_word);
+                    //System.out.println("The first word spoken is: "+first_spoken_word);
                 }
-                word = spokensentence;
+                word = spokenSentence;
                 findMeaning(word);
             }
             else {
                 System.out.println("Error recognizing. Did you update the subscription info?" + System.lineSeparator() + result.toString());
-                //txt.setText("Error recognizing. Did you update the subscription info?" + System.lineSeparator() + result.toString());
             }
-
             reco.close();
         } catch (Exception ex) {
             Log.e("SpeechSDKDemo", "unexpected " + ex.getMessage());
             assert(false);
-            System.out.println("Reachedddd else");
         }
-
     }
-
-
-//    public void deleteWordAndMeaning(View view){
-//        String word = mtextViewWord.getText().toString();
-//        if ("".equals(word)){
-//            Toast.makeText(MainActivity.this, "word field empty", Toast.LENGTH_LONG).show();
-//            return;
-//        }
-//        DatabaseInitializer.deleteAsync(AppDatabase.getAppDatabase(this), word);
-//    }
 }

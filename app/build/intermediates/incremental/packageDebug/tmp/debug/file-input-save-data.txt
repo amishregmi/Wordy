@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Feb 01 23:55:33 EST 2019
+#Sat Feb 02 18:21:38 EST 2019
 4.path=lib/x86_64/libMicrosoft.CognitiveServices.Speech.core.so
 8.set=NATIVE_RESOURCE
 6.path=lib/x86_64/libMicrosoft.CognitiveServices.Speech.java.bindings.so

@@ -4,13 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import android.graphics.Color;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Saved extends AppCompatActivity {
 
@@ -18,45 +21,69 @@ public class Saved extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved);
+
         List<BibData> resultListBibData;
         resultListBibData = DatabaseInitializer.getDatabase(AppDatabase.getAppDatabase(this));
 
-        Log.d(Saved.class.getName(), "Null case bhanda agadi");
-        RelativeLayout rl=(RelativeLayout)findViewById(R.id.rl);
+        LinearLayout linearLayout = findViewById(R.id.verticalLinearLayout);
+
         if (resultListBibData.isEmpty()){
             Log.d(Saved.class.getName(), "Null case ma pugyo");
             TextView textView = new TextView(this);
             textView.setText("Nothing to show on database");
-            rl.addView(textView);
+            linearLayout.addView(textView);
+            Toast.makeText(this,"Empty Dictionary", Toast.LENGTH_SHORT).show();
             return;
         }
-        Log.d(Saved.class.getName(), "Null case paxi not null bhandaagadi");
-        if (resultListBibData!=null){
-            Log.d(Saved.class.getName(), "Null not bhitra");
-            for (BibData bd: resultListBibData){
-                Log.d(Saved.class.getName(), "pass vayo ta ? " + bd.getWord() + " : " + bd.getMeaning());
-            }
+
+
+        for (int i = 0; i < resultListBibData.size(); i++) {
+            BibData bibData = resultListBibData.get(i);
+
+            LinearLayout subLayout = new LinearLayout(this);
+            subLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            subLayout.setOrientation(LinearLayout.VERTICAL);
+            subLayout.setBackground(getResources().getDrawable(R.drawable.border));
+            subLayout.setPadding(40,25,10,10);
+//            subLayout.setTag(bibData.getWord());
+            linearLayout.addView(subLayout);
+
+            TextView wordView = new TextView(this);
+            wordView.setWidth(50);
+            wordView.setTextSize(20);
+            wordView.setText(bibData.getWord().toUpperCase());
+            wordView.setTextColor(Color.parseColor("#BE3416"));
+
+            TextView meaningView = new TextView(this);
+            meaningView.setText(bibData.getMeaning());
+
+            //Delete view
+            final ImageView imageView = new ImageView(this);
+            final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
+            params.setMargins(5,5,5,5);
+            imageView.setPadding(5,5,5,5);
+            params.gravity = Gravity.RIGHT;
+            imageView.setLayoutParams(params);
+            imageView.setImageDrawable(getResources().getDrawable(R.drawable.deleteicon));
+            imageView.setTag(bibData.getWord());
+            imageView.setClickable(true);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((ViewGroup)v.getParent().getParent()).removeView((ViewGroup)v.getParent());
+                    String wordName = v.getTag().toString();
+                    System.out.println("asfasdfa"+wordName);
+                    deleteWordAndMeaning(wordName);                }
+            });
+
+            subLayout.addView(wordView);
+            subLayout.addView(meaningView);
+            subLayout.addView(imageView);
         }
-
-
-        ScrollView sv = new ScrollView(this);
-        sv.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        LinearLayout ll = new LinearLayout(this);
-        ll.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-        for(BibData i: resultListBibData)
-        {
-
-            TextView textView = new TextView(this);
-            textView.setText(i.getWord() + " : " + i.getMeaning());
-            ll.addView(textView);
-        }
-
-        rl.addView(sv);
     }
 
-
-
-
+    public void deleteWordAndMeaning(String word){
+        DatabaseInitializer.deleteAsync(AppDatabase.getAppDatabase(this), word);
+        Toast.makeText(this,"DELETED", Toast.LENGTH_SHORT).show();
+    }
 }

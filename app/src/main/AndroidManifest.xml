@@ -16,9 +16,6 @@
         android:label="OcrReaderApp"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
-        <activity android:name=".AudioActivity"></activity>
-        <activity android:name="com.microsoft.cognitiveservices.speech.AudioActivity" />
-        <activity android:name=".DictActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

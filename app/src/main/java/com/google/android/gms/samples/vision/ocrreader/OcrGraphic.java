@@ -99,6 +99,10 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
             return;
         }
 
+        RectF rect = new RectF(textBlock.getBoundingBox());
+        rect = translateRect(rect);
+        canvas.drawRect(rect, rectPaint);
+
         // Break the text into multiple lines and draw each one according to its own bounding box.
         List<? extends Text> textComponents = textBlock.getComponents();
         for(Text currentText : textComponents) {
@@ -113,7 +117,7 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
                 float temp_left = topLeft.x;
 
                 LocateWord.store(each.getValue(), temp_left, top, right, bottom);
-            }//canvas.drawText(currentText.getValue(), left, bottom, textPaint);
+            }
         }
     }
 }

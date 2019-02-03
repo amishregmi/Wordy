@@ -25,10 +25,6 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat" >
-        <activity android:name="com.google.android.gms.samples.vision.ocrreader.AudioActivity" />
-        <activity android:name="com.microsoft.cognitiveservices.speech.AudioActivity" />
-        <activity android:name="com.google.android.gms.samples.vision.ocrreader.DictActivity" />
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

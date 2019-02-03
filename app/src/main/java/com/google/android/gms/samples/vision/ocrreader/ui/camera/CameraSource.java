@@ -48,9 +48,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// Note: This requires Google Play Services 8.1 or higher, due to using indirect byte buffers for
-// storing images.
-
 /**
  * Manages the camera in conjunction with an underlying
  * {@link com.google.android.gms.vision.Detector}.  This receives preview frames from the camera at
@@ -135,7 +132,6 @@ public class CameraSource {
     private float requestedFps = 30.0f;
     private int requestedPreviewWidth = 1024;
     private int requestedPreviewHeight = 768;
-
 
     private String focusMode = null;
     private String flashMode = null;
@@ -481,27 +477,6 @@ public class CameraSource {
             parameters.setZoom(currentZoom);
             camera.setParameters(parameters);
             return currentZoom;
-        }
-    }
-
-    /**
-     * Initiates taking a picture, which happens asynchronously.  The camera source should have been
-     * activated previously with {@link #start()} or {@link #start(SurfaceHolder)}.  The camera
-     * preview is suspended while the picture is being taken, but will resume once picture taking is
-     * done.
-     *
-     * @param shutter the callback for image capture moment, or null
-     * @param jpeg    the callback for JPEG image data, or null
-     */
-    public void takePicture(ShutterCallback shutter, PictureCallback jpeg) {
-        synchronized (cameraLock) {
-            if (camera != null) {
-                PictureStartCallback startCallback = new PictureStartCallback();
-                startCallback.mDelegate = shutter;
-                PictureDoneCallback doneCallback = new PictureDoneCallback();
-                doneCallback.mDelegate = jpeg;
-                camera.takePicture(startCallback, null, null, doneCallback);
-            }
         }
     }
 

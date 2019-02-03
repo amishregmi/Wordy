@@ -15,24 +15,30 @@ import android.arch.persistence.room.util.TableInfo.Index;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 import java.lang.String;
+import java.lang.SuppressWarnings;
 import java.util.HashMap;
 import java.util.HashSet;
 
+@SuppressWarnings("unchecked")
 public class AppDatabase_Impl extends AppDatabase {
   private volatile BibDataDao _bibDataDao;
 
+  @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
+      @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `BibData` (`word` TEXT NOT NULL, `meaning` TEXT, PRIMARY KEY(`word`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2ec7bc407a4ccc0a9c89568cf731d8a3\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ec6588655565284675a10f0e72a17b11\")");
       }
 
+      @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `BibData`");
       }
 
+      @Override
       protected void onCreate(SupportSQLiteDatabase _db) {
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
@@ -41,6 +47,7 @@ public class AppDatabase_Impl extends AppDatabase {
         }
       }
 
+      @Override
       public void onOpen(SupportSQLiteDatabase _db) {
         mDatabase = _db;
         internalInitInvalidationTracker(_db);
@@ -51,6 +58,7 @@ public class AppDatabase_Impl extends AppDatabase {
         }
       }
 
+      @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsBibData = new HashMap<String, TableInfo.Column>(2);
         _columnsBibData.put("word", new TableInfo.Column("word", "TEXT", true, 1));
@@ -65,7 +73,7 @@ public class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingBibData);
         }
       }
-    }, "2ec7bc407a4ccc0a9c89568cf731d8a3");
+    }, "ec6588655565284675a10f0e72a17b11", "2ec7bc407a4ccc0a9c89568cf731d8a3");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -77,6 +85,23 @@ public class AppDatabase_Impl extends AppDatabase {
   @Override
   protected InvalidationTracker createInvalidationTracker() {
     return new InvalidationTracker(this, "BibData");
+  }
+
+  @Override
+  public void clearAllTables() {
+    super.assertNotMainThread();
+    final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
+    try {
+      super.beginTransaction();
+      _db.execSQL("DELETE FROM `BibData`");
+      super.setTransactionSuccessful();
+    } finally {
+      super.endTransaction();
+      _db.query("PRAGMA wal_checkpoint(FULL)").close();
+      if (!_db.inTransaction()) {
+        _db.execSQL("VACUUM");
+      }
+    }
   }
 
   @Override

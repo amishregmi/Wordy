@@ -147,6 +147,7 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
 
     /**
      * Removes all graphics from the overlay.
+     * Removes the detected words from the Hash map.
      */
     public void clear() {
         synchronized (lock) {
@@ -195,6 +196,9 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
         }
     }
 
+    /**
+     * Returns the location of the tap
+     */
     public int[] getLocOnScreen(){
         synchronized (lock) {
             int[] location = new int[2];
