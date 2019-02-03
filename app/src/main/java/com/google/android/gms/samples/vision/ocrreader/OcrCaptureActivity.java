@@ -75,14 +75,16 @@ import java.util.concurrent.Future;
  * rear facing camera. During detection overlay graphics are drawn to indicate the position,
  * size, and contents of each TextBlock.
  */
-public final class OcrCaptureActivity extends AppCompatActivity implements AsyncResponse {
+public final class OcrCaptureActivity extends AppCompatActivity implements AsyncResponse, AsyncResponseRealWord {
 
     // Replace below with your own subscription key
     private static String speechSubscriptionKey = "9dbfa487c11744a0905058796c82b57c";
     // Replace below with your own service region (e.g., "westus").
     private static String serviceRegion = "westus";
 
+    // Variable to store the user's word choice
     private String word;
+    // Variable to store the translated word
     private String translatedWord;
 
     private static final String TAG = "OcrCaptureActivity";
@@ -124,7 +126,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         boolean autoFocus = true;
         boolean useFlash = false;
 
-        //Translation menu
+        // Translation menu
         addDropDown();
 
         // Check for the camera permission before accessing the camera.  If the
@@ -139,7 +141,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        Snackbar.make(graphicOverlay, "Tap to Speak. Pinch/Stretch to zoom",
+        Snackbar.make(graphicOverlay, "Tap to select word. Pinch/Stretch to zoom",
                 Snackbar.LENGTH_LONG)
                 .show();
 
@@ -181,13 +183,12 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
 
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.fromTranslate, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.fromTranslate, android.R.layout.simple_spinner_dropdown_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner2.setAdapter(adapter2);
     }
-
 
     /**
      * Handles the requesting of the camera permission.  This includes
@@ -493,19 +494,31 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         }
     }
 
-    // On Click function to show intent of dictionary/database
+    /**
+     * On Click function to show intent of dictionary/database
+     */
     public void showAllWordAndMeaning(View view) {
         Log.d(OcrCaptureActivity.class.getName(), "showAllWordAndMeaning button clicked !");
         Intent intent = new Intent(this, Saved.class);
         startActivity(intent);
     }
 
+    public void translate(View view){
+        Intent intent = new Intent(this, TranslateAudio.class);
+        startActivity(intent);
+    }
+
+    /**
+     * displays the dialog box with word, meaning and translation
+     * @param unique
+     */
     public void displayWordOption( ArrayList<String> unique){
         final String uniqueWords[] = new String[unique.size()];
         for(int i = 0; i < unique.size(); i++ ){
             uniqueWords[i] = unique.get(i);
         }
-        System.out.println("The string array is " + uniqueWords.toString());
+        //System.out.println("The string array is " + uniqueWords.toString());
+
         final AlertDialog.Builder prompt = new AlertDialog.Builder(this);
         prompt.setItems(uniqueWords, new DialogInterface.OnClickListener() {
             @Override
@@ -513,10 +526,88 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
                 System.out.println("Int which is " + uniqueWords[which]);
                 String finalWord = uniqueWords[which];
                 word = finalWord;
-                findMeaning(finalWord);
+                getInflectedWord(finalWord);
             }
         });
         prompt.show();
+    }
+
+    /**
+     *    Calls CallbackTask.java class to get real word (look for looking)
+     */
+    public void getInflectedWord(String finalWord){
+        CallbackTask callbackTask = new CallbackTask();
+        callbackTask.delegate = this;
+        callbackTask.execute(inflections(finalWord));
+    }
+
+    /**
+     * returns url string to be called by getInflectedWord while CallbackTest
+     */
+    private String inflections(String finalWord) {
+        final String language = "en";
+        final String word_id = finalWord.toLowerCase(); //word id is case sensitive and lowercase is required
+        return "https://od-api.oxforddictionaries.com:443/api/v1/inflections/" + language + "/" + word_id;
+    }
+
+    /**
+     * This function is called when the AsyncTask of CallbackTask.java is finished
+     * wordMainForm is the main form of inflicted form
+     */
+    @Override
+    public void processFinish(String wordMainForm) {
+        System.out.println("Inside process finish function");
+        System.out.println("The main form in process finish is " + wordMainForm);
+        forRealWordMeaning(wordMainForm);
+    }
+
+    /**
+     * This function is called after AsyncTask of CallbackTask.java is finished
+     * Called from processFinish function
+     */
+    public void forRealWordMeaning(String wordMainForm){
+        MainWordCallbackTask mainWordCallbackTask = new MainWordCallbackTask();
+        mainWordCallbackTask.delegate = this;
+        mainWordCallbackTask.execute(dictionaryEntries(wordMainForm));
+    }
+
+    /**
+     * Returns url string to be called by forRealWordMeaning
+     * @param wordMainForm
+     * @return
+     */
+    private String dictionaryEntries(String wordMainForm) {
+        final String language = "en";
+        System.out.println("User input is " + wordMainForm);
+        final String word_id = wordMainForm.toLowerCase(); //word id is case sensitive and lowercase is required
+        return "https://od-api.oxforddictionaries.com:443/api/v1/entries/" + language + "/" + word_id;
+    }
+
+    /**
+     * This function is called when the AsyncTask of MainWorldCallbackTask is finished
+     */
+    @Override
+    public void processFinishForReal(String output) {
+        doTranslation();
+        System.out.println("The output in process finish is " + output);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this, R.style.CustomDialog);
+        alertDialog.setTitle(word);
+        alertDialog.setMessage(output + "\n\n" + "Translation: " + translatedWord);
+        alertDialog
+                .setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        saveWordAndMeaning(word, output);
+                    }
+                })
+                .setNegativeButton("Hear", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        tts.speak(output, TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                    }
+                });
+
+        alertDialog.show();
     }
 
     /**
@@ -533,33 +624,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
         System.out.println("User input is " + word);
         final String word_id = word.toLowerCase(); //word id is case sensitive and lowercase is required
         return "https://od-api.oxforddictionaries.com:443/api/v1/entries/" + language + "/" + word_id;
-    }
-
-    /**
-     * This function is called when the AsyncTask is finished
-     * The Asynctask is called to get meaning of a word
-     */
-    @Override
-    public void processFinish(final String output) {
-        doTranslation();
-        System.out.println("The output in process finish is " + output);
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle(word);
-        alertDialog.setMessage(output + "\n\n" + "Translation: " + translatedWord);
-        alertDialog
-                .setPositiveButton("Save", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        saveWordAndMeaning(word, output);
-                    }
-                })
-                .setNegativeButton("Hear", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        tts.speak(output, TextToSpeech.QUEUE_ADD, null, "DEFAULT");
-                    }
-                });
-        alertDialog.show();
     }
 
     /**
@@ -706,6 +770,11 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
     //Records audio and converts it to text
     public void performAudio(View v) {
         Toast.makeText(this, "Audio recording...", Toast.LENGTH_LONG).show();
+
+        Snackbar.make(graphicOverlay, "Recording Voice",
+                5000)
+                .show();
+
         try {
             SpeechConfig config = SpeechConfig.fromSubscription(speechSubscriptionKey, serviceRegion);
             assert(config != null);
@@ -715,8 +784,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Async
 
             Future<SpeechRecognitionResult> task = reco.recognizeOnceAsync();
             assert(task != null);
-            System.out.println("Reachedddd 2");
-
 
             SpeechRecognitionResult result = task.get();
             assert(result != null);

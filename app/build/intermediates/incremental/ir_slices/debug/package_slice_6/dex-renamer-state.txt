@@ -1,4 +1,4 @@
-#Sat Feb 02 17:59:39 EST 2019
-base.0=C\:\\Users\\bibha\\Desktop\\ocr-reader-complete\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+#Sun Feb 03 01:21:17 EST 2019
+base.0=C\:\\Users\\bibha\\Desktop\\ocr-reader-complete\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\23
 path.0=classes.dex
 renamed.0=classes.dex

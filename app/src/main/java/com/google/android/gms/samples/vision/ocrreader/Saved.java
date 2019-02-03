@@ -36,7 +36,6 @@ public class Saved extends AppCompatActivity {
             return;
         }
 
-
         for (int i = 0; i < resultListBibData.size(); i++) {
             BibData bibData = resultListBibData.get(i);
 
@@ -45,7 +44,6 @@ public class Saved extends AppCompatActivity {
             subLayout.setOrientation(LinearLayout.VERTICAL);
             subLayout.setBackground(getResources().getDrawable(R.drawable.border));
             subLayout.setPadding(40,25,10,10);
-//            subLayout.setTag(bibData.getWord());
             linearLayout.addView(subLayout);
 
             TextView wordView = new TextView(this);

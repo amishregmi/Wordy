@@ -99,9 +99,9 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
             return;
         }
 
-        RectF rect = new RectF(textBlock.getBoundingBox());
+        /*RectF rect = new RectF(textBlock.getBoundingBox());
         rect = translateRect(rect);
-        canvas.drawRect(rect, rectPaint);
+        canvas.drawRect(rect, rectPaint);*/
 
         // Break the text into multiple lines and draw each one according to its own bounding box.
         List<? extends Text> textComponents = textBlock.getComponents();

@@ -52,4 +52,18 @@
         <item>Swedish</item>
         <item>Turkish</item>
     </string-array>
+    <string-array name="Translate">
+        <item>English</item>
+        <item>Danish</item>
+        <item>Dutch</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Japanese</item>
+        <item>Italian</item>
+        <item>Korean</item>
+        <item>Portuguese</item>
+        <item>Spanish</item>
+        <item>Swedish</item>
+        <item>Turkish</item>
+    </string-array>
 </resources>

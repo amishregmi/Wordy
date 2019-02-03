@@ -6,7 +6,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="23"
         android:targetSdkVersion="27" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -21,10 +21,15 @@
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
-        android:label="OcrReaderApp"
+        android:label="Wordy"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat" >
+        <activity
+            android:name="com.google.android.gms.samples.vision.ocrreader.TranslateAudio"
+            android:label="Translate"
+            android:parentActivityName="com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -34,7 +39,7 @@
 
         <activity
             android:name="com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity"
-            android:label="Read Text" >
+            android:label="Wordy" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,7 +48,7 @@
         </activity>
         <activity
             android:name="com.google.android.gms.samples.vision.ocrreader.Saved"
-            android:label="SAVED"
+            android:label="Dictionary"
             android:parentActivityName="com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

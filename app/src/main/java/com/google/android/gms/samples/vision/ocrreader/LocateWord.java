@@ -21,11 +21,6 @@ public final class LocateWord {
     }
 
     public static void store(String word, float left, float top, float right, float bottom){
-//        left = (int) left;
-//        top = (int) top;
-//        right = (int) right;
-//        bottom = (int) bottom;
-
         Point topLeft = new Point();
         Point topRight = new Point();
         Point bottomRight = new Point();
